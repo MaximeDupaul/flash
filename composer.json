@@ -1,0 +1,27 @@
+{
+    "name": "mdupaul/flash",
+    "description": "Easy flash notifications with multiple messages",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maxime Dupaul",
+            "email": "maximedupaul@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "~5.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mdupaul\\Flash": "src/"
+        },
+        "files": [
+            "src/Mdupaul/Flash/functions.php"
+        ]
+    },
+    "minimum-stability": "stable"
+}
