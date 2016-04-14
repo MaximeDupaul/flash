@@ -20,12 +20,12 @@ class FlashServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind(
-            'Laracasts\Flash\SessionStore',
-            'Laracasts\Flash\LaravelSessionStore'
+            'Mdupaul\Flash\SessionStore',
+            'Mdupaul\Flash\LaravelSessionStore'
         );
 
         $this->app->singleton('flash', function () {
-            return $this->app->make('Laracasts\Flash\FlashNotifier');
+            return $this->app->make('Mdupaul\Flash\FlashNotifier');
         });
     }
 

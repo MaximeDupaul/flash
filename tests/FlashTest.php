@@ -1,6 +1,6 @@
 <?php
 
-use Laracasts\Flash\FlashNotifier;
+use Mdupaul\Flash\FlashNotifier;
 use Mockery as m;
 
 class FlashTest extends PHPUnit_Framework_TestCase {
