@@ -1,4 +1,4 @@
-* Forked at first from Laracasts/Flash to port it to Laravel 5.2
+* Forked at first from Laracasts/Presenters to port it to Laravel 5.2
 # Easy Flash Messages
 
 ## Installation
