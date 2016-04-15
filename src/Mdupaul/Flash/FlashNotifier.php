@@ -1,5 +1,7 @@
 <?php namespace Mdupaul\Flash;
 
+use Illuminate\Support\Facades\Session;
+
 class FlashNotifier
 {
 
@@ -97,8 +99,14 @@ class FlashNotifier
      */
     public function message($message, $level = 'info')
     {
-        $this->session->flash('flash_notification.message', $message);
-        $this->session->flash('flash_notification.level', $level);
+
+        $messages = [];
+        if (Session::has('flash_notification.messages')) {
+            $messages = Session::get('flash_notification.messages');
+        }
+        $messages[] = [$level => $message];
+
+        $this->session->flash('flash_notification.messages', $messages);
 
         return $this;
     }
