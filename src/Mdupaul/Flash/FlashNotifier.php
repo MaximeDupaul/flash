@@ -74,6 +74,19 @@ class FlashNotifier
     }
 
     /**
+     * Flash a sticky message.
+     *
+     * @param  string $message
+     * @return $this
+     */
+    public function sticky($message)
+    {
+        $this->message($message, 'sticky');
+
+        return $this;
+    }
+
+    /**
      * Flash an overlay modal.
      *
      * @param  string $message
