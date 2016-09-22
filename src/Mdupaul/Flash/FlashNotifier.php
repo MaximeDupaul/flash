@@ -114,8 +114,8 @@ class FlashNotifier
     {
 
         $messages = [];
-        if (Session::has('flash_notification.messages')) {
-            $messages = Session::get('flash_notification.messages');
+        if ($this->hasNotificationMessages()) {
+            $messages = $this->getNotificationMessages();
         }
         $messages[] = [$level => $message];
 
@@ -136,4 +136,19 @@ class FlashNotifier
         return $this;
     }
 
+    /**
+     * Tells if there are notification messages
+     * @return mixed
+     */
+    public function hasNotificationMessages() {
+        return Session::has('flash_notification.messages');
+    }
+
+    /**
+     * Returns the notification messages
+     * @return mixed
+     */
+    public function getNotificationMessages() {
+        return Session::get('flash_notification.messages');
+    }
 }
